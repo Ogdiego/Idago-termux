@@ -9,7 +9,7 @@ export async function all(m, chatUpdate) {
         return
     if (!m.message)
         return
-    if (!(m.message.buttonsResponseMessage || m.message.templateButtonReplyMessage || m.message.listResponseMessage))
+    if (!(m.message.ResponseMessage || m.message.templateReplyMessage || m.message.listResponseMessage))
         return
     let id = m.message.ResponseMessage?.selectedId || m.message.templateReplyMessage?.selectedId || m.message.listResponseMessage?.singleSelectReply?.selectedRowId
     let text = m.message.ResponseMessage?.selectedDisplayText || m.message.templateReplyMessage?.selectedDisplayText || m.message.listResponseMessage?.title
