@@ -11,8 +11,8 @@ export async function all(m, chatUpdate) {
         return
     if (!(m.message.buttonsResponseMessage || m.message.templateButtonReplyMessage || m.message.listResponseMessage))
         return
-    let id = m.message.buttonsResponseMessage?.selectedButtonId || m.message.templateButtonReplyMessage?.selectedId || m.message.listResponseMessage?.singleSelectReply?.selectedRowId
-    let text = m.message.buttonsResponseMessage?.selectedDisplayText || m.message.templateButtonReplyMessage?.selectedDisplayText || m.message.listResponseMessage?.title
+    let id = m.message.ResponseMessage?.selectedId || m.message.templateReplyMessage?.selectedId || m.message.listResponseMessage?.singleSelectReply?.selectedRowId
+    let text = m.message.ResponseMessage?.selectedDisplayText || m.message.templateReplyMessage?.selectedDisplayText || m.message.listResponseMessage?.title
     let isIdMessage = false, usedPrefix
     for (let name in global.plugins) {
         let plugin = global.plugins[name]
