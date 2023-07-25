@@ -27,7 +27,7 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
    m.reply('🔁 *Descargando...*\n\n*❰ ❗ ❱ Si no obtiene ningun resultado o le sale algun error intente con otro nombre*') 
    let vid = results.all.find(video => video.seconds < 3600) 
    if (!vid) throw '*Video/Audio No encontrado* ' 
-   let isVideo = /2$/.test(command) 
+   let isVideo = .test(command) 
    let { dl_link, thumb, title, filesize, filesizeF} = await (isVideo ? ytv : yta)(vid.url, 'id4') 
    //let isLimit = (isPrems || isOwner ? 99 : limit) * 1024 < filesizesLimit 
    conn.sendFile(m.chat, thumb, 'thumbnail.jpg', ` 
