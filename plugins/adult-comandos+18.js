@@ -79,23 +79,16 @@ import axios from "axios"
  let res = await fetch(`https://api.waifu.pics/nsfw/trap`) 
  let json = await res.json() 
  let url = json.url 
- conn.sendMessage(m.chat, { image: { url: url }, caption: `_${command}_`.trim() }, { quoted: m })} 
-  
- if (command == 'imagenlesbians') { 
- let resError = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/imagenlesbians.json`)).data    
- let res = await conn.getFile(`https://api-fgmods.ddns.net/api/nsfw/lesbian?apikey=fg-dylux`).data 
- if (res == '' || !res || res == null) res = await resError[Math.floor(resError.length * Math.random())]   
- conn.sendMessage(m.chat, { image: { url: res }, caption: `_${command}_`.trim() }, { quoted: m })}   
+ conn.sendMessage(m.chat, { image: { url: url }, caption: `_${command}_`.trim() }, { quoted: m })}    
   
  if (command == 'panties') { 
- let res = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/panties.json`)).data   
- let url = await res[Math.floor(res.length * Math.random())] 
+ let res = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/panties.json`)).data 
+let url = await res[Math.floor(res.length * Math.random())] 
  conn.sendMessage(m.chat, { image: { url: url }, caption: `_${command}_`.trim() }, { quoted: m })} 
   
  if (command == 'pene') { 
- let resError = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/pene.json`)).data    
- let res = await conn.getFile(`https://api-fgmods.ddns.net/api/nsfw/penis?apikey=fg-dylux`).data 
- if (res == '' || !res || res == null) res = await resError[Math.floor(resError.length * Math.random())]   
+ let res = (await axios.get(`https://raw.githubusercontent.com/BrunoSobrino/TheMystic-Bot-MD/master/src/JSON/pene.json`)).data    
+ let url = await res[Math.floor(res.length * Math.random())] 
  conn.sendMessage(m.chat, { image: { url: res }, caption: `_${command}_`.trim() }, { quoted: m })} 
   
  if (command == 'porno') { 
