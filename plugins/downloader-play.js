@@ -12,7 +12,7 @@ import fetch from "node-fetch"
  additionalText = 'audio 🔊' 
  } else if (command === 'play2') { 
  additionalText = 'video 🎥'} 
- let texto1 = `❏ *_Enviando ${additionalText},*/ aguarde un momento．．．_*`.trim() 
+ let texto1 = `❏ _*Enviando ${additionalText}, aguarde un momento...*_`.trim() 
  conn.sendMessage(m.chat, { image: { url: yt_play[0].thumbnail }, caption: texto1 }, { quoted: m }) 
  if (command == 'play') { 
  try { 
@@ -62,7 +62,7 @@ import fetch from "node-fetch"
  } catch {    
  try {   
  let mediaa = await ytMp4(yt_play[0].url) 
- await conn.sendMessage(m.chat, { video: { url: mediaa.result }, fileName: `error.mp4`, caption: `_𝐓𝐡𝐞 𝐌𝐲𝐬𝐭𝐢𝐜 - 𝐁𝐨𝐭_`, thumbnail: mediaa.thumb, mimetype: 'video/mp4' }, { quoted: m })      
+ await conn.sendMessage(m.chat, { video: { url: mediaa.result }, fileName: `error.mp4`, caption: `_𝐈𝐃𝐀𝐆𝐎 𝐁𝐎𝐓-𝐌𝐃_`, thumbnail: mediaa.thumb, mimetype: 'video/mp4' }, { quoted: m })      
  } catch {   
  try { 
  let lolhuman = await fetch(`https://api.lolhuman.xyz/api/ytvideo2?apikey=${lolkeysapi}&url=${yt_play[0].url}`)     
