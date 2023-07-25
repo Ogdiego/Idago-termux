@@ -13,8 +13,8 @@ import fetch from "node-fetch"
  additionalText = 'audio 🔊' 
  } else if (command === 'play2') { 
  additionalText = 'video 🎥'} 
- let texto1 = `/**╔═══════❰  *🔰*  ❱══════⬣* 
- ║ *TITULO*: 
+ let texto1 = `/**╔═══════❰  *🔰*  ❱══════⬣**/ 
+ /*║ *TITULO*: 
  ║ ${yt_play[0].title}  
  ║ *PUBLICADO*: 
  ║ ${yt_play[0].ago}  
