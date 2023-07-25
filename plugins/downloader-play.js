@@ -103,9 +103,9 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
       let ytLink = await fetch(
         `https://api.lolhuman.xyz/api/ytplay2?apikey=${lolkeysapi}&query=${text}`
       );
-      let jsonn = await ytLink.json();
+      /* let jsonn = await ytLink.json();
       let aud = await jsonn.result.audio;
-      let capt = `❏ 📌 *𝚃𝙸𝚃𝚄𝙻𝙾:* ${title}\n❏ 📆 *𝙿𝚄𝙱𝙻𝙸𝙲𝙰𝙳𝙾:* ${published}\n❏ 👀 *𝚅𝙸𝚂𝚃𝙰𝚂:* ${views}\n❏ 🔗 *𝙻𝙸𝙽𝙺:* ${url}`;
+      let capt = `❏ 📌 *𝚃𝙸𝚃𝚄𝙻𝙾:* ${title}\n❏ 📆 *𝙿𝚄𝙱𝙻𝙸𝙲𝙰𝙳𝙾:* ${published}\n❏ 👀 *𝚅𝙸𝚂𝚃𝙰𝚂:* ${views}\n❏ 🔗 *𝙻𝙸𝙽𝙺:* */ ${url}`;
       const buttons = [
         {
           buttonId: `#playlist ${title}`,
