@@ -87,7 +87,7 @@ let url = await res[Math.floor(res.length * Math.random())]
  conn.sendMessage(m.chat, { image: { url: url }, caption: `_${command}_`.trim() }, { quoted: m })} 
   
    if (command == "pene") { 
-     let res = (await axios.get(`https://raw.githubusercontent.com/DIEGO-OFC/DORRAT-BOT-MD/master/galeria/JSON/pene.json`)).data; 
+     let res = (await axios.get(`https://raw.githubusercontent.com/Idagoo05/TheMystic-Bot-MD/master/galeria/JSON/pene.json`)).data; 
 let url = await res[Math.floor(res.length * Math.random())]; 
  conn.sendMessage(m.chat, { image: { url: haha }, caption: `_${command}_`.trim() }, { quoted: m })}
   
