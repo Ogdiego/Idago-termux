@@ -24,7 +24,7 @@ break
 }} catch {
 throw `*[❗] 𝙽𝙾 𝚂𝙴 𝙴𝙽𝙲𝙾𝙽𝚃𝚁𝙾 𝙽𝙸𝙽𝙶𝚄𝙽 𝙼𝙾𝙳 𝙰𝙿𝙺 𝙲𝙾𝙽 𝙴𝚂𝙴 𝙽𝙾𝙼𝙱𝚁𝙴 𝙾 𝙻𝙰 𝙰𝙿𝙸 (𝙿𝙰𝙶𝙸𝙽𝙰) 𝙴𝚂𝚃𝙰 𝙲𝙰𝙸𝙳𝙰*`
 }}    
-handler.command = /^(apkmod|modapk|dapk2|aptoide|aptoidedl)$/i
+handler.command = /^(apkmod|modapk|dapk2|aptoide|aptoidedl|apkm|modapk2|dapk|descargapk)$/i
 export default handler
 
 
