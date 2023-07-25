@@ -1,4 +1,4 @@
-let handler = async (m, { conn, usedPrefix }) => {
+/*let handler = async (m, { conn, usedPrefix }) => {
 var doc = ['pdf','zip','vnd.openxmlformats-officedocument.presentationml.presentation','vnd.openxmlformats-officedocument.spreadsheetml.sheet','vnd.openxmlformats-officedocument.wordprocessingml.document']
 var document = doc[Math.floor(Math.random() * doc.length)]    
 let text = `
@@ -58,4 +58,4 @@ conn.sendMessage(m.chat, buttonMessage, { quoted: m })
 handler.help = ['owner', 'creator']
 handler.tags = ['info']
 handler.command = /^(owner|creator|creador|propietario)$/i
-export default handler
+export default handler*/
