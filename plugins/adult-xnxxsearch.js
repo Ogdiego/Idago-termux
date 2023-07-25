@@ -31,7 +31,7 @@ export default handler
 
 async function xnxxsearch(query) {
 return new Promise((resolve, reject) => {
-const baseurl = 'https://www.xnxx.com'
+const baseurl = 'https://www.xnxx.com|https://www.xnxx.com/gay'
 fetch(`${baseurl}/search/${query}/${Math.floor(Math.random() * 3) + 1}`, {method: 'get'}).then(res => res.text()).then(res => {
 let $ = cheerio.load(res, { xmlMode: false });
 let title = [];
