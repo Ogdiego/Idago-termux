@@ -36,10 +36,10 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
   if (!text)
     throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝙻𝙰 𝙲𝙰𝙽𝙲𝙸𝙾𝙽 𝙵𝙰𝙻𝚃𝙰𝙽𝚃𝙴, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙼𝙰𝚂 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴/𝚃𝙸𝚃𝚄𝙻𝙾 𝙳𝙴 𝚄𝙽𝙰 𝙲𝙰𝙽𝙲𝙸𝙾𝙽*\n\n*—◉ 𝙴𝙹𝙴𝙼𝙿𝙻𝙾:*\n*${
       usedPrefix + command
-    } Good Feeling - Flo Rida*`;
+    } Cinnamon Girl - Lana Del Rey*`;
   try {
     const yt_play = await search(args.join(" "));
-    let texto1 = `*◉—⌈🔊 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 𝐏𝐋𝐀𝐘 🔊⌋—◉*\n
+    let texto1 = * `*◉—⌈🔊 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 𝐏𝐋𝐀𝐘 🔊⌋—◉*\n
 ❏ 📌 *𝚃𝙸𝚃𝚄𝙻𝙾:* ${yt_play[0].title}
 ❏ 📆 *𝙿𝚄𝙱𝙻𝙸𝙲𝙰𝙳𝙾:* ${yt_play[0].ago}
 ❏ ⌚ *𝙳𝚄𝚁𝙰𝙲𝙸𝙾𝙽:* ${secondString(yt_play[0].duration.seconds)}
@@ -48,7 +48,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
 ❏ ⏯️ *𝙲𝙰𝙽𝙰𝙻:* ${yt_play[0].author.url}
 ❏ 🆔 *𝙸𝙳:* ${yt_play[0].videoId}
 ❏ 🪬 *𝚃𝙸𝙿𝙾:* ${yt_play[0].type}
-❏ 🔗 *𝙻𝙸𝙽𝙺:* ${yt_play[0].url}`.trim();
+❏ 🔗 *𝙻𝙸𝙽𝙺:* ${yt_play[0].url}`* .trim();
     const buttons = [
       {
         buttonId: `#ytmp3 ${yt_play[0].url}`,
