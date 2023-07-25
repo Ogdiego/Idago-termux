@@ -1,31 +1,91 @@
-import fs from 'fs'
-import fetch from 'node-fetch'
-import { xpRange } from '../lib/levelling.js'
-const { levelling } = '../lib/levelling.js'
-import PhoneNumber from 'awesome-phonenumber'
-import { promises } from 'fs'
-import { join } from 'path'
-let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, isPrems }) => {
-try {
-let vn = './media/menu.mp3'
-let pp = imagen4
-let img = await(await fetch('https://www.paidmembershipspro.com/wp-content/uploads/2017/07/PayPal-Express.png')).buffer()
-let d = new Date(new Date + 3600000)
-let locale = 'es'
-let week = d.toLocaleDateString(locale, { weekday: 'long' })
-let date = d.toLocaleDateString(locale, { day: 'numeric', month: 'long', year: 'numeric' })
-let _uptime = process.uptime() * 1000
-let uptime = clockString(_uptime)
-let user = global.db.data.users[m.sender]
-let { money, joincount } = global.db.data.users[m.sender]
-let { exp, limit, level, role } = global.db.data.users[m.sender]
-let { min, xp, max } = xpRange(level, global.multiplier)
-let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
-let more = String.fromCharCode(8206)
-let readMore = more.repeat(850)   
-let taguser = '@' + m.sender.split("@s.whatsapp.net")
-let str = `
-╭═══〘 ✯✯✯✯✯✯✯✯✯ 〙══╮
+import fs from 'fs' 
+ import fetch from 'node-fetch' 
+ import { xpRange } from '../lib/levelling.js' 
+ const { levelling } = '../lib/levelling.js' 
+ import PhoneNumber from 'awesome-phonenumber' 
+ import { promises } from 'fs' 
+ import { join } from 'path' 
+ let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, command }) => { 
+ try { 
+ let _package = JSON.parse(await promises.readFile(join(__dirname, '../package.json')).catch(_ => ({}))) || {} 
+ let { exp, limit, level, role } = global.db.data.users[m.sender] 
+ let { min, xp, max } = xpRange(level, global.multiplier) 
+ let name = await conn.getName(m.sender) 
+ let d = new Date(new Date + 3600000) 
+ let locale = 'es' 
+ let weton = ['Pahing', 'Pon', 'Wage', 'Kliwon', 'Legi'][Math.floor(d / 84600000) % 5] 
+ let week = d.toLocaleDateString(locale, { weekday: 'long' }) 
+ let date = d.toLocaleDateString(locale, { 
+ day: 'numeric', 
+ month: 'long', 
+ year: 'numeric' 
+ }) 
+ let dateIslamic = Intl.DateTimeFormat(locale + '-TN-u-ca-islamic', { 
+ day: 'numeric', 
+ month: 'long', 
+ year: 'numeric' 
+ }).format(d) 
+ let time = d.toLocaleTimeString(locale, { 
+ hour: 'numeric', 
+ minute: 'numeric', 
+ second: 'numeric' 
+ }) 
+ let _uptime = process.uptime() * 1000 
+ let _muptime 
+ if (process.send) { 
+ process.send('uptime') 
+ _muptime = await new Promise(resolve => { 
+ process.once('message', resolve) 
+ setTimeout(resolve, 1000) 
+ }) * 1000 
+ } 
+ let { money, joincount } = global.db.data.users[m.sender] 
+ let user = global.db.data.users[m.sender] 
+ let muptime = clockString(_muptime) 
+ let uptime = clockString(_uptime) 
+ let totalreg = Object.keys(global.db.data.users).length 
+ let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length 
+ let replace = { 
+ '%': '%', 
+ p: _p, uptime, muptime, 
+ me: conn.getName(conn.user.jid), 
+ npmname: _package.name, 
+ npmdesc: _package.description, 
+ version: _package.version, 
+ exp: exp - min, 
+ maxexp: xp, 
+ totalexp: exp, 
+ xp4levelup: max - exp, 
+ github: _package.homepage ? _package.homepage.url || _package.homepage : '[unknown github url]', 
+ level, limit, name, weton, week, date, dateIslamic, time, totalreg, rtotalreg, role, 
+ readmore: readMore 
+ } 
+ text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name]) 
+ let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender 
+ let mentionedJid = [who] 
+ let username = conn.getName(who) 
+ let pp = gataVidMenu.getRandom() 
+ let pareja = global.db.data.users[m.sender].pasangan  
+ let fkontak = { "key": { "participants":"0@s.whatsapp.net", "remoteJid": "status@broadcast", "fromMe": false, "id": "Halo" }, "message": { "contactMessage": { "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:y\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabel:Ponsel\nEND:VCARD` }}, "participant": "0@s.whatsapp.net" } 
+ //let fsizedoc = '1'.repeat(10) 
+ //let adReply = { fileLength: fsizedoc, seconds: fsizedoc, contextInfo: { forwardingScore: fsizedoc, externalAdReply: { showAdAttribution: true, title: wm, body: '👋 ' + username, mediaUrl: ig, description: 'Hola', previewType: 'PHOTO', thumbnail: await(await fetch(gataMenu.getRandom())).buffer(), sourceUrl: redesMenu.getRandom() }}} 
+ const numberToEmoji = { "0": "0️⃣", "1": "1️⃣", "2": "2️⃣", "3": "3️⃣", "4": "4️⃣", "5": "5️⃣", "6": "6️⃣", "7": "7️⃣", "8": "8️⃣", "9": "9️⃣", } 
+ let lvl = level 
+ let emoji = Array.from(lvl.toString()).map((digit) => numberToEmoji[digit] || "❓").join("") 
+  
+ let menu = `${lenguajeGB['smsConfi2']()} *${user.genero === 0 ? '👤' : user.genero == 'Ocultado 🕶️' ? `🕶️` : user.genero == 'Mujer 🚺' ? `🚺` : user.genero == 'Hombre 🚹' ? `🚹` : '👤'} ${user.registered === true ? user.name : username}*${(conn.user.jid == global.conn.user.jid ? '' : `\n*SOY SUB BOT DE: https://wa.me/${global.conn.user.jid.split`@`[0]}*`) || ''} 
+  
+ \`\`\`${week}, ${date}\`\`\` 
+ ⎔ *${lenguajeGB['smsTotalUsers']()}* ➺ _${Object.keys(global.db.data.users).length}_  
+ ⎔ *Registrados »* ${rtotalreg}/${totalreg} 
+ ⎔ *${lenguajeGB['smsTime']()}* ➺ _${time}_     
+ ⎔ *${lenguajeGB['smsUptime']()}* ➺ _${uptime}_  
+ ⎔ *${lenguajeGB['smsVersion']()}* ➺ _${vs}_ 
+ ⎔ *${lenguajeGB['smsMode']()} ➺* _${global.opts['self'] ? `${lenguajeGB['smsModePrivate']().charAt(0).toUpperCase() + lenguajeGB['smsModePrivate']().slice(1).toLowerCase()}` : `${lenguajeGB['smsModePublic']().charAt(0).toUpperCase() + lenguajeGB['smsModePublic']().slice(1).toLowerCase()}`}_ 
+ ⎔ *${lenguajeGB['smsBanChats']()}* ➺ _${Object.entries(global.db.data.chats).filter(chat => chat[1].isBanned).length}_  
+ ⎔ *${lenguajeGB['smsBanUsers']()}* ➺ _${Object.entries(global.db.data.users).filter(user => user[1].banned).length}_ 
+  
+' ╭═══〘 ✯✯✯✯✯✯✯✯✯ 〙══╮
 ║    ◉— *𝐈𝐃𝐀𝐆𝐎 𝐁𝐎𝐓-𝐌𝐃* —◉
 ║≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡≡║
 ║➤ *𝗛ola, ${taguser}*
@@ -624,41 +684,22 @@ ${readMore}
 ┣ ඬ⃟ 💀 _${usedPrefix}crash6_
 ┣ ඬ⃟ 💀 _${usedPrefix}crash7_
 ┣ ඬ⃟ 💀 _${usedPrefix}crash8_
-┗━━━━━━━━━━━━━━━━┛
-`.trim()
-conn.reply = [m.chat
-{ buttonId: '#donar', buttonText: { displayText: '📮 𝙳𝙾𝙽𝙰𝚁 📮' }, type: 1 },
-//{ buttonId: '#terminosycondiciones', buttonText: { displayText: '📋 𝚃𝙴𝚁𝙼𝙸𝙽𝙾𝚂 𝚈 𝙲𝙾𝙽𝙳𝙸𝙲𝙸𝙾𝙽𝙴𝚂 📋' }, type: 1 }]
-{ buttonId: '#infobot', buttonText: { displayText: '🐾 𝙸𝙽𝙵𝙾𝙱𝙾𝚃 🐾' }, type: 1 }]
-let buttonMessage = {
-image: pp,
-caption: str.trim(),
-mentions: [m.sender],
-footer: `*${wm}*`,
-conn.reply: m.chat,
-headerType: 4,
-contextInfo: {
-mentionedJid: [m.sender],
-externalAdReply: {
-showAdAttribution: true,
-mediaType: 'VIDEO',
-mediaUrl: null,
-title: '👑 𝐈𝐃𝐀𝐆𝐎-𝐁𝐎𝐓 👑',
-body: null,
-thumbnail: img,
-sourceUrl: ``
-}}}
-conn.sendMessage(m.chat, buttonMessage, { quoted: m })
-//await conn.sendFile(m.chat, vn, 'menu.mp3', null, m, true, { type: 'audioMessage', ptt: true})
-} catch {
-conn.reply(m.chat, '*[❗𝐈𝐍𝐅𝐎❗] 𝙴𝙻 𝙼𝙴𝙽𝚄 𝚃𝙸𝙴𝙽𝙴 𝚄𝙽 𝙴𝚁𝚁𝙾𝚁 𝚈 𝙽𝙾 𝙵𝚄𝙴 𝙿𝙾𝚂𝙸𝙱𝙻𝙴 𝙴𝙽𝚅𝙸𝙰𝚁𝙻𝙾, 𝚁𝙴𝙿𝙾𝚁𝚃𝙴𝙻𝙾 𝙰𝙻 𝙿𝚁𝙾𝙿𝙸𝙴𝚃𝙰𝚁𝙸𝙾 𝙳𝙴𝙻 𝙱𝙾𝚃*', m)
-}}
-handler.command = /^(menu|menú|memu|memú|help|info|comandos|allmenu|2help|menu1.2|ayuda|commands|commandos|cmd)$/i
-handler.exp = 50
-handler.fail = null
-export default handler
-function clockString(ms) {
-let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
-let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
-let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}
+┗━━━━━━━━━━━━━━━━┛`.trim() 
+ await conn.sendFile(m.chat, Menu.getRandom(), 'Idago.mp4', menu, fkontak) 
+  
+ } catch (e) { 
+ await m.reply(lenguajeGB['smsMalError3']() + '\n*' + lenguajeGB.smsMensError1() + '*\n*' + usedPrefix + `${lenguajeGB.lenguaje() == 'es' ? 'reporte' : 'report'}` + '* ' + `${lenguajeGB.smsMensError2()} ` + usedPrefix + command) 
+ console.log(`❗❗ ${lenguajeGB['smsMensError2']()} ${usedPrefix + command} ❗❗`) 
+ console.log(e)}} 
+  
+ handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|menucompleto|allmenu|allm|m|\?)$/i 
+ //handler.register = true 
+ export default handler 
+  
+ const more = String.fromCharCode(8206) 
+ const readMore = more.repeat(4001) 
+ function clockString(ms) { 
+ let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000) 
+ let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60 
+ let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60 
+ return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')}  
