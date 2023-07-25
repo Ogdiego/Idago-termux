@@ -81,5 +81,5 @@ mentions: m.mentionedJid
 }
 handler.help = ['homosexual', 'gay2', 'lesbiana', 'pajero', 'pajera', 'puto', 'puta', 'manco', 'manca', 'rata', 'prostituta', 'prostituto', 'chavista'].map(v => v + ' @tag | nombre')
 handler.tags = ['calculator']
-handler.command = /^homosexual|gay2|lesbiana|pajero|pajera|puto|puta|manco|manca|rata|prostituta|prostituto|Chavista/i
+handler.command = /^homosexual|gay2|lesbiana|pajero|pajera|puto|puta|manco|manca|rata|prostituta|prostituto|chavista/i
 export default handler
