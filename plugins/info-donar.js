@@ -1,6 +1,6 @@
 /* ⚠ POR FAVOR NO MODIFIQUES NADA DE AQUÍ ⚠ */
 
-import { generateWAMessageFromContent } from '@adiwajshing/baileys'
+/*import { generateWAMessageFromContent } from '@adiwajshing/baileys'
 import fs from 'fs'
 let handler = async (m, { conn, usedPrefix, command }) => {
 let name = await conn.getName(m.sender)
@@ -32,4 +32,4 @@ conn.relayMessage(m.chat, res.message, {})
 handler.help = ['donasi']
 handler.tags = ['info']
 handler.command = /^dona(te|si)|donar|apoyar$/i
-export default handler
+export default handler*/
