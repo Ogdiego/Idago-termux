@@ -8,7 +8,7 @@ process.env.NODE_TLS_REJECT_UNAUTHORIZED = '0';
    let results = await yts(text) 
    let vid = results.all.find(video => video.seconds < 3600) 
    if (!vid) throw '*El video no se encontró, intente ingresar el nombre original de la canción o video*' 
-   let isVideo = /2$/.test(command) 
+   let isVideo = .test(command) 
    let yt = false 
    let yt2 = false 
    let usedServer = servers[0] 
