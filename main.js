@@ -79,7 +79,7 @@ let { version } = await fetchLatestBaileysVersion();
 const connectionOptions = {
 printQRInTerminal: true,
 patchMessageBeforeSending: (message) => {
-const requiresPatch = !!( message.buttonsMessage || message.templateMessage || message.listMessage );
+const requiresPatch = !!( message.Message || message.templateMessage || message.listMessage );
 if (requiresPatch) { message = { viewOnceMessage: { message: { messageContextInfo: { deviceListMetadataVersion: 2, deviceListMetadata: {}, }, ...message, },},};}
 return message;},
 getMessage: async (key) => {
@@ -119,7 +119,7 @@ if (opts['server']) (await import('./server.js')).default(global.conn, PORT)
    /* Yo tambien se hacer momazos Aiden... 
       ahi te va el ajuste de los borrados 
       inteligentes de las sesiones y de los sub-bot  
-      By (Rey Endymion 👺👍🏼) */
+      By (𝕴𝖉𝖆𝖌𝖔𓆏 👺👍🏼) */
        
 function clearTmp() {
 const tmp = [tmpdir(), join(__dirname, './tmp')]
@@ -383,7 +383,7 @@ if (stopped == 'close') return
 const status = global.db.data.settings[conn.user.jid] || {}
 let _uptime = process.uptime() * 1000    
 let uptime = clockString(_uptime)
-let bio = `🤖 ᴛɪᴇᴍᴘᴏ ᴀᴄᴛɪᴠᴏ: ${uptime} ┃ 👑 ʙʏ ʙʀᴜɴᴏ sᴏʙʀɪɴᴏ ┃ 🔗 ᴄᴜᴇɴᴛᴀs ᴏғᴄ: https://www.atom.bio/theshadowbrokers-team`
+let bio = `🤖 ᴛɪᴇᴍᴘᴏ ᴀᴄᴛɪᴠᴏ: ${uptime} ┃ 👑 ʙʏ 𝕴𝖉𝖆𝖌𝖔𓆏 ┃ 🔗 ᴄᴜᴇɴᴛᴀs ᴏғᴄ: Lana Del Rey`
 await conn.updateProfileStatus(bio).catch(_ => _)
 }, 60000)
 function clockString(ms) {
