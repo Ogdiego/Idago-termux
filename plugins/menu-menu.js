@@ -419,7 +419,6 @@
  ┣ ඬ⃟ 🔊 _Viernes_ 
  ┣ ඬ⃟ 🔊 _Baneado_ 
  ┣ ඬ⃟ 🔊 _Sexo_ 
- ┣ ඬ⃟ 🔊 _Hola_ 
  ┣ ඬ⃟ 🔊 _Un pato_ 
  ┣ ඬ⃟ 🔊 _Nyanpasu_ 
  ┣ ඬ⃟ 🔊 _Te amo_ 
@@ -518,7 +517,7 @@
  ┣ ඬ⃟ 👽 _${usedPrefix}slap *<@tag>*_ 
  ┣ ඬ⃟ 👽 _${usedPrefix}kiss *<@tag>*_ 
  ┣ ඬ⃟ 👽 _${usedPrefix}dado_ 
- ┣ ඬ⃟ 👽 _${usedPrefix}wm *<packname> <author>*_ 
+ ┣ ඬ⃟ 👽 _$ wm *<packname> <author>*_ 
  ┣ ඬ⃟ 👽 _${usedPrefix}stickermarker *<efecto> <imagen>*_ 
  ┣ ඬ⃟ 👽 _${usedPrefix}stickerfilter *<efecto> <imagen>*_ 
  ┗━━━━━━━━━━━━━━━━┛ 
