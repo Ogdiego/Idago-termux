@@ -4,7 +4,7 @@ import fetch from "node-fetch"
  import axios from 'axios' 
  import { youtubedl, youtubedlv2 } from '@bochilteam/scraper' 
  let handler = async (m, { conn, command, args, text, usedPrefix }) => { 
- if (!text) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝙻𝙰 𝙲𝙰𝙽𝙲𝙸𝙾𝙽 𝙵𝙰𝙻𝚃𝙰𝙽𝚃𝙴, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙼𝙰𝚂 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴/𝚃𝙸𝚃𝚄𝙻𝙾 𝙳𝙴 𝚄𝙽𝙰 𝙲𝙰𝙽𝙲𝙸𝙾𝙽*\n\n*—◉ 𝙴𝙹𝙴𝙼𝙿𝙻𝙾:*\n*${usedPrefix + command} Good Feeling - Flo Rida*` 
+ if (!text) throw `*[❗𝐈𝐍𝐅𝐎❗] 𝙽𝙾𝙼𝙱𝚁𝙴 𝙳𝙴 𝙻𝙰 𝙲𝙰𝙽𝙲𝙸𝙾𝙽 𝙵𝙰𝙻𝚃𝙰𝙽𝚃𝙴, 𝙿𝙾𝚁 𝙵𝙰𝚅𝙾𝚁 𝙸𝙽𝙶𝚁𝙴𝚂𝙴 𝙴𝙻 𝙲𝙾𝙼𝙰𝙽𝙳𝙾 𝙼𝙰𝚂 𝙴𝙻 𝙽𝙾𝙼𝙱𝚁𝙴/𝚃𝙸𝚃𝚄𝙻𝙾 𝙳𝙴 𝚄𝙽𝙰 𝙲𝙰𝙽𝙲𝙸𝙾𝙽*\n\n*—◉ 𝙴𝙹𝙴𝙼𝙿𝙻𝙾:*\n*${usedPrefix + command} Cruel Summer - Taylor Swift*` 
  try { 
  const yt_play = await search(args.join(" ")) 
  let additionalText = '' 
@@ -12,7 +12,7 @@ import fetch from "node-fetch"
  additionalText = 'audio 🔊' 
  } else if (command === 'play2') { 
  additionalText = 'video 🎥'} 
- let texto1 = `*◉——⌈🔊 YOUTUBE PLAY 🔊⌋——◉*\n 
+ let texto1 = /*`*◉——⌈🔊 YOUTUBE PLAY 🔊⌋——◉*\n 
  ❏ 📌 *Titulo:* ${yt_play[0].title} 
  ❏ 📆 *Publicado:* ${yt_play[0].ago} 
  ❏ ⌚ *Duracion:* ${secondString(yt_play[0].duration.seconds)} 
@@ -22,7 +22,7 @@ import fetch from "node-fetch"
  ❏ 🆔 *ID:* ${yt_play[0].videoId} 
  ❏ 🪬 *Tipo:* ${yt_play[0].type} 
  ❏ 🔗 *Link:* ${yt_play[0].url}\n 
- ❏ *_Enviando ${additionalText}, aguarde un momento．．．_*`.trim() 
+ ❏ *_Enviando ${additionalText}, aguarde un momento．．．_*`*/.trim() 
  conn.sendMessage(m.chat, { image: { url: yt_play[0].thumbnail }, caption: texto1 }, { quoted: m }) 
  if (command == 'play') { 
  try { 
