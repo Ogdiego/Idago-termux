@@ -39,7 +39,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
     } Cinnamon Girl - Lana Del Rey*`;
   try {
     const yt_play = await search(args.join(" "));
-    let texto1 = * `*◉—⌈🔊 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 𝐏𝐋𝐀𝐘 🔊⌋—◉*\n
+    let texto1 = /* `*◉—⌈🔊 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 𝐏𝐋𝐀𝐘 🔊⌋—◉*\n
 ❏ 📌 *𝚃𝙸𝚃𝚄𝙻𝙾:* ${yt_play[0].title}
 ❏ 📆 *𝙿𝚄𝙱𝙻𝙸𝙲𝙰𝙳𝙾:* ${yt_play[0].ago}
 ❏ ⌚ *𝙳𝚄𝚁𝙰𝙲𝙸𝙾𝙽:* ${secondString(yt_play[0].duration.seconds)}
@@ -48,7 +48,7 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
 ❏ ⏯️ *𝙲𝙰𝙽𝙰𝙻:* ${yt_play[0].author.url}
 ❏ 🆔 *𝙸𝙳:* ${yt_play[0].videoId}
 ❏ 🪬 *𝚃𝙸𝙿𝙾:* ${yt_play[0].type}
-❏ 🔗 *𝙻𝙸𝙽𝙺:* ${yt_play[0].url}`* .trim();
+❏ 🔗 *𝙻𝙸𝙽𝙺:* ${yt_play[0].url}`*/ .trim();
     const buttons = [
       {
         buttonId: `#ytmp3 ${yt_play[0].url}`,
