@@ -30,7 +30,7 @@ async function handler(m, { conn, args, usedPrefix, command }) {
 Tienes  *60* s
 `.trim()
     let c = 'FG - dylux-bot'
-    conn.sendButton(m.chat, confirm, c, null, [['si'], ['no']], m, { mentions: [who] })
+    conn.sendMessage(m.chat, confirm, c, null, [['si'], ['no']], m, { mentions: [who] })
     confirmation[m.sender] = {
         sender: m.sender,
         to: who,
