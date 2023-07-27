@@ -29,19 +29,19 @@ let minar = `${pickRandom(['Que pro 😎 has minado',
 '♻️ Tu Mision se ha cumplido, lograste minar',
 '⛏️ La Mineria te ha beneficiado con',
 '🛣️ Has encontrado un Lugar y por minar dicho lugar Obtienes',
-'👾 Gracias a que has minado tus ingresos suman',
+'🏴‍☠️ Gracias a que has minado tus ingresos suman',
 'Felicidades!! Ahora tienes','⛏️⛏️⛏️ Obtienes'])}`
 
 let pp = './Menu2.jpg'
 
-let aqua = `${pickRandom([2, 3, 1])}` * 1
-let aquapremium = `${pickRandom([2, 3, 1]}}' * 1
+let aqua = `${pickRandom([0, 2, 3, 1, 5])}` * 1
+let aquapremium = `${pickRandom([2, 4, 6, 7, 5, 9])}` * 1
 
-let rock = `${pickRandom([2, 3, 1])}` * 1
-let rockpremium = `${pickRandom([2, 3, 1])}` * 1
+let rock = `${pickRandom([6, 9, 0, 12, 2])}` * 1
+let rockpremium = `${pickRandom([13, 9, 17, 20, 25])}` * 1
 
-let pancingan = `${pickRandom([1, 2, 3])}` * 1
-let pancinganpremium = `${pickRandom([1, 3, 2])}` * 1
+let pancingan = `${pickRandom([1, 0, 2, 1, 0, 0, 0])}` * 1
+let pancinganpremium = `${pickRandom([1, 3, 4, 9, 2, 5, 8])}` * 1
 
 const recompensas = {	
   aqua: premium ? aquapremium : aqua,
