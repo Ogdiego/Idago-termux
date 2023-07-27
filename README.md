@@ -40,7 +40,7 @@ pkg install -y git nodejs ffmpeg imagemagick && pkg install yarn
 ```
 
 ```bash
-git clone https://github.com/Idagoo05/Mystic-termux.git && cd Mystic-termux
+git clone https://github.com/Ogdiego/Idago-termux.git && cd Idago-termux
 ```
 
 ```bash
@@ -60,8 +60,8 @@ ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 ```bash
 ESCRIBE LOS SIGUIENTES COMANDOS UNO POR UNO:
 > cd 
-> cd Mystic-termux
-> rm -rf MysticSession
+> cd Idago-termux
+> rm -rf IdagoSession
 > npm start
 ```
 
