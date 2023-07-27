@@ -4,9 +4,7 @@
  try { 
  let pp = imagen4 
  //let vn = './media/menu.mp3' 
- let img =  './8fff1963513f9f63129c120745c18707.jpg
-Ir al archivo
-' 
+ let img =  './8fff1963513f9f63129c120745c18707.jpg' 
  let d = new Date(new Date + 3600000) 
  let locale = 'es' 
  let week = d.toLocaleDateString(locale, { weekday: 'long' }) 
