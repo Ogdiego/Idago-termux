@@ -34,25 +34,25 @@ let minar = `${pickRandom(['Que pro 😎 has minado',
 
 let pp = './Menu2.jpg'
 
-let aqua = `${pickRandom([0, 2, 3, 1, 5])}` * 1
-let aquapremium = `${pickRandom([2, 4, 6, 7, 5, 9])}` * 1
+let aqua = `${pickRandom([2, 3, 1])}` * 1
+let aquapremium = `${pickRandom([2, 3, 1]}}' * 1
 
-let rock = `${pickRandom([6, 9, 0, 12, 2])}` * 1
-let rockpremium = `${pickRandom([13, 9, 17, 20, 25])}` * 1
+let rock = `${pickRandom([2, 3, 1])}` * 1
+let rockpremium = `${pickRandom([2, 3, 1])}` * 1
 
-let pancingan = `${pickRandom([1, 0, 2, 1, 0, 0, 0])}` * 1
-let pancinganpremium = `${pickRandom([1, 3, 4, 9, 2, 5, 8])}` * 1
+let pancingan = `${pickRandom([1, 2, 3])}` * 1
+let pancinganpremium = `${pickRandom([1, 3, 2])}` * 1
 
 const recompensas = {	
   aqua: premium ? aquapremium : aqua,
   rock: premium ? rockpremium : rock,
   pancingan: premium ? pancinganpremium : pancingan,
 }
-//let xp = Math.floor(Math.random() * 200000)
+let xp = Math.floor(Math.random() * 200000)
 let money = `${pickRandom([90000,100000,200000])}` * 1
 let moneypremium = `${pickRandom([90000,100000,200000])}` * 1
 
-let time = user.lastcoins + 600000 //10 min
+let time = user.lastcoins + 600000 //1 min
 if (new Date - user.lastcoins < 600000) return await conn.reply(m.chat, `*⏱️ 𝙑𝙪𝙚𝙡𝙫𝙖 𝙚𝙣 ${msToTime(time - new Date())} 𝙥𝙖𝙧𝙖 𝙘𝙤𝙣𝙩𝙞𝙣𝙪𝙖𝙧 𝙢𝙞𝙣𝙖𝙣𝙙𝙤 ${global.rpgshopp.emoticon('money')}⛏️*\n\n*𝙂𝙚𝙩 𝙗𝙖𝙘𝙠 𝙞𝙣 ${msToTime(time - new Date())} 𝙩𝙤 𝙢𝙞𝙣𝙚 ${global.rpgshopp.emoticon('money')}⛏️*`, fkontak,  m)
 user.money += premium ? moneypremium : money  
 let texto = ''
@@ -69,7 +69,7 @@ user.lastcoins = new Date * 1
 }
 handler.help = ['minar2']
 handler.tags = ['gata']
-handler.command = ['minar2', 'miming2', 'mine2', 'minarmysticcoins', 'minarcoins', 'minarmystic'] 
+handler.command = ['minar2', 'miming2', 'mine2', 'minarcoinsidago', 'minarcoins', 'minaridago'] 
 handler.fail = null
 handler.exp = 0
 export default handler
