@@ -3,10 +3,10 @@ let time = global.db.data.users[m.sender].lastcofre + 86400000 // 36000000 10 Ho
 if (new Date - global.db.data.users[m.sender].lastcofre < 86400000) throw `[❗𝐈𝐍𝐅𝐎❗] 𝚈𝙰 𝚁𝙴𝙲𝙻𝙰𝙼𝙰𝚂𝚃𝙴 𝚃𝚄 𝙲𝙾𝙵𝚁𝙴\𝚗𝚅𝚄𝙴𝙻𝚅𝙴 𝙴𝙽 *${msToTime(time - new Date())}* 𝙿𝙰𝚁𝙰 𝚅𝙾𝙻𝚅𝙴𝚁 𝙰 𝚁𝙴𝙲𝙻𝙰𝙼𝙰𝚁`
 
 let img = 'https://img.freepik.com/vector-gratis/cofre-monedas-oro-piedras-preciosas-cristales-trofeo_107791-7769.jpg?w=2000'
-let dia = Math.floor(Math.random() * 30)
-let tok = Math.floor(Math.random() * 10)
-let mystic = Math.floor(Math.random() * 4000)
-let expp = Math.floor(Math.random() * 5000)
+let dia = Math.floor(Math.random() * 300000)
+let tok = Math.floor(Math.random() * 100000)
+let mystic = Math.floor(Math.random() * 40000000)
+let expp = Math.floor(Math.random() * 50000000)
 
   global.db.data.users[m.sender].limit += dia
   global.db.data.users[m.sender].money += mystic
