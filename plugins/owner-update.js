@@ -5,7 +5,7 @@ import { execSync } from 'child_process'
  let stdout = execSync('git pull' + (m.fromMe && text ? ' ' + text : '')) 
  conn.reply(m.chat, stdout.toString(), m)} 
  } catch { 
- var update = execSync('git remote set-url origin https://github.com/Idago/Idago-termux.git && git pull') 
+ var update = execSync('git remote set-url origin https://github.com/Ogdiego/Idago-termux.git && git pull') 
  await m.reply(update.toString()) 
  }} 
  handler.help = ['update'] 
