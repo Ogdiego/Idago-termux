@@ -1,7 +1,7 @@
 {
     "name": "The-Idago-Bot-MD",
     "version": "1.0.0",
-    "description": "Subs. al canal de YT The Shadow Borkers - TEAM",
+    "description": "Holis como estas? 𓆏",
     "main": "index.js",
     "type": "module",
     "directories": {
@@ -14,16 +14,16 @@
         "test": "node test.js",
         "test2": "nodemon index.js"
     },
-    "homepage": "https://github.com/Idagoo05/TheMystic-Bot-MD",
+    "homepage": "https://github.com/Idagoo05/Theidago-Bot-MD",
     "author": {
         "name": "𝕴𝖉𝖆𝖌𝖔𓆏"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/Idagoo05/TheMystic-Bot-MD.git"
+        "url": "git+https://github.com/Ogdiego/Theidago-Bot-MD.git"
     },
     "bugs": {
-        "url": "https://github.com/Idagoo05/TheMystic-Bot-MD/issues"
+        "url": "https://github.com/Ogdiego/Theidago-Bot-MD/issues"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
