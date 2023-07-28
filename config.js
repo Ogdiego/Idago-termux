@@ -14,10 +14,10 @@ global.owner = [
 global.suittag = ['584121275155'] 
 global.prems = ['584121275155'] 
 
-global.packname = '𝕴𝖉𝖆𝖌𝖔𓆏'
-global.author = '★𝐈𝐃𝐀𝐆𝐎 𝐁𝐎𝐓-𝐌𝐃★'
-global.wm = '★𝐈𝐃𝐀𝐆𝐎 𝐁𝐎𝐓-𝐌𝐃★'
-global.igfg = '★𝐈𝐃𝐀𝐆𝐎 𝐁𝐎𝐓-𝐌𝐃★'
+global.packname = '𝕴𝖉𝖆𝖌𝖔'
+global.author = '𓆏'
+global.wm = '𓆏'
+global.igfg = '𓆏'
 global.wait = '*[❗] Ƈᴀʀɢᴀɴᴅᴏ, ᴀɢᴜᴀʀᴅᴇ ᴜɴ ᴍᴏᴍᴇɴᴛᴏ...*'
 
 
